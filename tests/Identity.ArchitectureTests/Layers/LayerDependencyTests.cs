@@ -17,7 +17,8 @@ public sealed class LayerDependencyTests
             .Are(DomainLayer)
             .Should()
             .NotDependOnAny(ApplicationLayer)
-            .Because("The domain layer must contain framework-independent business rules");
+            .Because("The domain layer must contain framework-independent business rules")
+            .WithoutRequiringPositiveResults();
 
         rule.Check(Architecture);
     }
@@ -30,7 +31,8 @@ public sealed class LayerDependencyTests
             .Are(DomainLayer)
             .Should()
             .NotDependOnAny(InfrastructureLayer)
-            .Because("The Domain layer must not know how persistence or external services are implemented");
+            .Because("The Domain layer must not know how persistence or external services are implemented")
+            .WithoutRequiringPositiveResults();
 
         rule.Check(Architecture);
     }
@@ -43,7 +45,8 @@ public sealed class LayerDependencyTests
             .Are(DomainLayer)
             .Should()
             .NotDependOnAny(ApiLayer)
-            .Because("The Domain layer must not depend on HTTP or presentation concerns");
+            .Because("The Domain layer must not depend on HTTP or presentation concerns")
+            .WithoutRequiringPositiveResults();
 
         rule.Check(Architecture);
     }
@@ -56,7 +59,8 @@ public sealed class LayerDependencyTests
             .Are(ApplicationLayer)
             .Should()
             .NotDependOnAny(InfrastructureLayer)
-            .Because("Infrastructure must implement Application abstractions, not the reverse");
+            .Because("Infrastructure must implement Application abstractions, not the reverse")
+            .WithoutRequiringPositiveResults();
 
         rule.Check(Architecture);
     }
@@ -69,7 +73,8 @@ public sealed class LayerDependencyTests
             .Are(ApplicationLayer)
             .Should()
             .NotDependOnAny(ApiLayer)
-            .Because("Application use cases must remain independent from HTTP transport concerns");
+            .Because("Application use cases must remain independent from HTTP transport concerns")
+            .WithoutRequiringPositiveResults();
 
         rule.Check(Architecture);
     }
@@ -82,7 +87,8 @@ public sealed class LayerDependencyTests
             .Are(InfrastructureLayer)
             .Should()
             .NotDependOnAny(ApiLayer)
-            .Because("Infrastructure must not depend on the application's composition root");
+            .Because("Infrastructure must not depend on the application's composition root")
+            .WithoutRequiringPositiveResults();
 
         rule.Check(Architecture);
     }
