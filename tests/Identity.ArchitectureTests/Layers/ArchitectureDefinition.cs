@@ -1,7 +1,7 @@
 using ArchUnitNET.Domain;
 using ArchUnitNET.Loader;
 
-namespace Identity.ArchitectureTests;
+namespace Identity.ArchitectureTests.Layers;
 
 internal static class ArchitectureDefinition 
 {

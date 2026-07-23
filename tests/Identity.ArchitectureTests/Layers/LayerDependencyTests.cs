@@ -2,10 +2,10 @@ using ArchUnitNET.Fluent;
 using ArchUnitNET.xUnit;
 
 using static ArchUnitNET.Fluent.ArchRuleDefinition;
-using static Identity.ArchitectureTests.ArchitectureDefinition;
-using static Identity.ArchitectureTests.ArchitectureLayers;
+using static Identity.ArchitectureTests.Layers.ArchitectureDefinition;
+using static Identity.ArchitectureTests.Layers.ArchitectureLayers;
 
-namespace Identity.ArchitectureTests;
+namespace Identity.ArchitectureTests.Layers;
 
 public sealed class LayerDependencyTests
 {

@@ -2,7 +2,7 @@ using ArchUnitNET.Domain;
 
 using static ArchUnitNET.Fluent.ArchRuleDefinition;
 
-namespace Identity.ArchitectureTests;
+namespace Identity.ArchitectureTests.Layers;
 
 internal static class ArchitectureLayers
 {
