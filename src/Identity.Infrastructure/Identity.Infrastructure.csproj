@@ -21,6 +21,9 @@
         buildtransitive
       </IncludeAssets>
     </PackageReference>
+
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
   </ItemGroup>
 
   <PropertyGroup>
